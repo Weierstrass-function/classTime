@@ -72,14 +72,14 @@ namespace ClassTime
 
         public static bool operator !=(Time t1, Time t2) => !(t1 == t2);
 
-
-        public override string ToString() => $"{_hours:D2}:{_minutes:D2}";
-
         public static Time operator -(Time t1, uint num)
         {
             Time t2 = new(num);
             return new Time(t1.Hours - t2.Hours, t1.Minutes - t2.Minutes);
         }
+
+
+        public override string ToString() => $"{_hours:D2}:{_minutes:D2}";
 
         public override bool Equals(object? obj)
         {
