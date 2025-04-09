@@ -72,6 +72,7 @@ namespace ClassTime
 
         public static bool operator !=(Time t1, Time t2) => !(t1 == t2);
 
+
         public override string ToString() => $"{_hours:D2}:{_minutes:D2}";
 
         public static Time operator -(Time t1, uint num)
